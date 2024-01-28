@@ -1,6 +1,6 @@
 # Scoreboard
 Create a folder leaderboard and clone this repository.
-Leaderboard Application (React.js + Ruby on rails +SQLite)
+Leaderboard Application (React.js + Ruby on Rails + SQLite).
 Used Session-Based Authentication ( Ref:https://dev.to/diiiiana99/connecting-javascript-react-and-ruby-on-rails-user-authentication-and-authorization-2le3 )
 
 **Step to run the code:**
