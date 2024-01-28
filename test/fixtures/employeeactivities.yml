@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  associate_id: 1
+  activity_id: 1
+
+two:
+  associate_id: 1
+  activity_id: 1

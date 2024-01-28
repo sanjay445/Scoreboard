@@ -1,0 +1,42 @@
+.associates-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .associates-table th, .associates-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .associates-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .selected {
+    background-color: #e0e0e0; /* or any other desired color */
+  }
+  .hoverRow {
+    cursor: pointer;
+  }
+  .bodyContent{
+    margin-top: 10px !important;
+  }
+  .title{
+    display: inline-flex;
+    align-items: center;
+  }
+  .h3style{
+    margin-bottom: 0px;
+  }
+  .activityListbox{
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    overflow-y: scroll;
+    margin: 10px;
+  }

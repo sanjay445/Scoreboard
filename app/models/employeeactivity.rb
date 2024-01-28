@@ -1,0 +1,2 @@
+class Employeeactivity < ApplicationRecord
+end
