@@ -12,8 +12,9 @@ const Leaderboard = (props) => {
     const [emplist, setTasks] = useState([]);
     const [empActivityList, setempActivityList] = useState([]);
     const [selectedAssociateId, setSelectedAssociateId] = useState(null);
-    const [roldID, setRoleId ] = useState(0)
-    const [selectedroldID, setSelectedRoleId ] = useState(1)
+    const [associateID, setAssociateId ] = useState(0)
+    const [selectedassociateID, setSelectedAssociateID ] = useState(1)
+    const [role, setRole] = useState(0)
     // const [empType, setempType] = useState([]);
 
     const navigate = useNavigate();
@@ -23,7 +24,8 @@ const Leaderboard = (props) => {
         if(!res.data.logged_in){
           window.location.replace('http://localhost:3000/');
         }else{
-          setRoleId(res.data.user.id)
+          setAssociateId(res.data.user.id)
+          setRole(res.data.user.role_id)
         }
       })
          loadTasks(); 
@@ -57,7 +59,7 @@ const Leaderboard = (props) => {
         const empActivityList = await LeaderboardService.getTask({associate_id});
         setempActivityList(empActivityList)
         console.log("tasksData",empActivityList)
-        setSelectedRoleId(associate_id)
+        setSelectedAssociateID(associate_id)
         // const empTypeData = await EmploymentService.getTask({associate_id});
         // setempType(empTypeData)
         // console.log("empTypeData",empTypeData)
@@ -98,8 +100,8 @@ const Leaderboard = (props) => {
         <div style={header}>
          <nav className='row' style={headerrow}>
            <ul className='col-11' style={tabs}>
-             <li>
-               <Link to="/activities" style={{ color: "#fff" }}>Activity points</Link>
+             <li>{role==1? <Link to="/activities" style={{ color: "#fff" }}>Activity points</Link>:<p></p>}
+              
              </li>
              <li>
                <Link to="/leaderboard" style={{ color: "#fff" }}>Leaderboard</Link>
@@ -159,7 +161,7 @@ const Leaderboard = (props) => {
     {/* <button onClick={()=>addData()} className='success'>Add</button> */}
     </div>
     <div >
-    {roldID === selectedroldID && (
+    {associateID === selectedassociateID && (
         <div className='activityListbox'>
           {activities.map((res) => (
             <button
