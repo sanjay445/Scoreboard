@@ -6,6 +6,6 @@ Redirect to leaderboard folder and execute the below command to run the Rails Se
 1) bundle install
 2) rails s -p 3001
 
-Redirect to leaderboard_client folder and execute the below command to run the React Client Server:
+Redirect to leaderboard_client folder and execute the below command to run the React Client:
 1) npm install
 2) npm start
